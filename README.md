@@ -1,3 +1,5 @@
+Welcome to the Tee Time Finder App!!
+
 # Mod 1 ActiveRecord Starter Repo
 
 In `config/database.yml`, you can change the name of the database from `db/cats.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 

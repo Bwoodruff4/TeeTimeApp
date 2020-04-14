@@ -10,21 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_210626) do
+ActiveRecord::Schema.define(version: 2020_04_14_225117) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
+    t.string "public"
+    t.integer "cost"
+    t.string "driving_range"
   end
 
   create_table "golfers", force: :cascade do |t|
     t.string "name"
-    t.integer "party_size"
+    t.integer "age"
+    t.integer "handicap"
   end
 
   create_table "teetimes", force: :cascade do |t|
     t.string "reservation_time"
     t.integer "course_id"
     t.integer "golfer_id"
+    t.integer "party_size"
     t.index ["course_id"], name: "index_teetimes_on_course_id"
     t.index ["golfer_id"], name: "index_teetimes_on_golfer_id"
   end

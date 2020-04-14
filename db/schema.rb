@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_210626) do
 
   create_table "golfers", force: :cascade do |t|
     t.string "name"
-    t.integer "party_size"
+    
   end
 
   create_table "teetimes", force: :cascade do |t|
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_210626) do
     t.integer "golfer_id"
     t.index ["course_id"], name: "index_teetimes_on_course_id"
     t.index ["golfer_id"], name: "index_teetimes_on_golfer_id"
+    
   end
 
   add_foreign_key "teetimes", "courses"

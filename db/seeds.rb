@@ -1,3 +1,9 @@
+Teetime.destroy_all
+Course.destroy_all
+Golfer.destroy_all
+
+
+
 course1 = Course.create(
     name: "Augusta"
 ) 

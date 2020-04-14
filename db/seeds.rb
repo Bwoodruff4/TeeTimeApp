@@ -48,7 +48,7 @@ teetime1 = Teetime.create(
     reservation_time: "7:00AM 4/15/2020",
     golfer: golfer1,
     course: course1
-    part_size: 3
+    party_size: 3
     )
 
 teetime2 = Teetime.create(

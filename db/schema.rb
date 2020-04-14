@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_225117) do
     t.integer "party_size"
     t.index ["course_id"], name: "index_teetimes_on_course_id"
     t.index ["golfer_id"], name: "index_teetimes_on_golfer_id"
+    
   end
 
   add_foreign_key "teetimes", "courses"

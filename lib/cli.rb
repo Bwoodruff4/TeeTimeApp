@@ -2,9 +2,27 @@ class Cli
 
     def appstart
         puts "Welcome to Tee Time App"
-        name = get_reservation_name
-        party_size = get_party_size
-        create_new_golfer(name, party_size)
+        puts "For list of commands type 'help'."
+        user_input = gets.chomp
+        while user_input != 'exit'
+            if user_input == 'help'
+                help
+            elsif user_input == 'make reservation'
+                make_reservation
+            end
+            user_input=gets.chomp
+        end
+        puts "Thanks for using the Tee Time App :)"
+    end
+
+    def help
+        puts "/******************* Tee Time Commands **********************/"
+        puts "/'help' -Displays list of commands                           /"
+        puts "/'make reservation' -Allows user to make Tee Time reservation/"
+        puts "/'find reservation' -Finds a reservation by name             /"
+        puts "/'find course' -Displays list of available courses           /"
+        puts "/'exit' -Quits the program                                   /"
+        puts "/'change party' -Allows user to change their party size"
     end
 
     def get_reservation_name
@@ -29,6 +47,14 @@ class Cli
 
     def create_new_golfer(name, party_size)
         Golfer.create(name: name, party_size: party_size)
+    end
+
+    def make_reservation
+        name = get_reservation_name
+        party_size = get_party_size
+        create_new_golfer(name, party_size)
+
+
     end
 
 end

@@ -53,8 +53,6 @@ class Cli
         name = get_reservation_name
         party_size = get_party_size
         create_new_golfer(name, party_size)
-
-
     end
 
 end

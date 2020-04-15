@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_225117) do
+ActiveRecord::Schema.define(version: 2020_04_14_225301) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2020_04_14_225117) do
     t.integer "party_size"
     t.index ["course_id"], name: "index_teetimes_on_course_id"
     t.index ["golfer_id"], name: "index_teetimes_on_golfer_id"
-    
   end
 
   add_foreign_key "teetimes", "courses"

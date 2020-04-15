@@ -8,7 +8,7 @@ class Cli
             if user_input == 'help'
                 help
             elsif user_input == 'make reservation'
-                make_reservation(get_golfer_info, get_teetime_info)
+                make_reservation(get_golfer_info)
             end
             user_input=gets.chomp
         end
@@ -89,13 +89,11 @@ class Cli
         Teetime.create(reservation_time: reservation_time, course: course, golfer: golfer, party_size: party_size)
     end
 
-    def get_teetime_info
-        teetime_info = [get_reservation_time, get_course, get_party_size]
-    end
 
-    def make_reservation(golfer_info, teetime_info)
+    def make_reservation(golfer_info)
         golfer = create_new_golfer(golfer_info[0], golfer_info[1], golfer_info[2])
-        create_new_teetime(teetime_info[0], teetime_info[1], golfer, teetime_info[2])
+        create_new_teetime(get_reservation_time, get_course, golfer, get_party_size)
+        puts "Your reservation has been made."
     end
 
 end

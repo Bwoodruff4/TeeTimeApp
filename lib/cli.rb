@@ -13,6 +13,10 @@ class Cli
                 find_reservation
             elsif user_input == 'cancel reservation'
                 cancel_reservation
+            elsif user_input == 'change party'
+                change_party
+            else
+                puts "Not a valid command. Please try again."
             end
             user_input=gets.chomp
         end
@@ -24,8 +28,8 @@ class Cli
         puts "/'help' -Displays list of commands                              /"
         puts "/'make reservation' -Allows user to make Tee Time reservation   /"
         puts "/'cancel reseration' -Allows user to cancel Tee Time reservation/"
-        puts "/'find reservation' -Finds a reservation by name                /"
-        puts "/'find courses' -Displays list of available courses              /"
+        puts "/'find reservation' -Finds a reservation                        /"
+        puts "/'find courses' -Displays list of available courses             /"
         puts "/'change party' -Allows user to change their party size         /"
         puts "/'exit' -Quits the program                                      /"
     end
@@ -81,11 +85,8 @@ class Cli
         puts "Please enter number of golfers in your party:"
         party_size = Integer(gets) rescue false
 
-        if party_size == false
-            puts "Error: Party size must be a number 1-4. Please enter a valid size."
-            get_party_size   
-        elsif party_size > 4 
-            puts "Party size cannot exceed 4. Please enter a valid size."
+        if party_size == false || party_size > 4 || party_size < 1
+            puts "Error: Party size must be a number 1-4. Please enter a valid number."
             get_party_size
         else
             return party_size
@@ -137,10 +138,29 @@ class Cli
 
         if reservation == nil
             puts "Sorry, reservation not found."
+            return
         else
             puts "Reservation Time: #{reservation.reservation_time}\nParty Size: #{reservation.party_size}"
         end
         reservation
+    end
+
+    def change_party
+        reservation = find_reservation
+        
+        if reservation == nil
+            puts "Sorry, reservation not found."
+            return
+        end
+        puts "Is this the reservation you would like to update? (y/n)"
+        user_input = gets.chomp.downcase
+
+        if user_input == 'n'
+            return
+        elsif user_input == 'y'
+            reservation.party_size = get_party_size
+            puts "Reservation has been updated."
+        end
     end
 
 end

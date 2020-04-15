@@ -147,11 +147,11 @@ class Cli
 
     def change_party
         reservation = find_reservation
-        
+
         if reservation == nil
-            puts "Sorry, reservation not found."
             return
         end
+        
         puts "Is this the reservation you would like to update? (y/n)"
         user_input = gets.chomp.downcase
 
@@ -162,5 +162,39 @@ class Cli
             puts "Reservation has been updated."
         end
     end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 end

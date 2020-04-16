@@ -6,7 +6,6 @@ class Weather
         @@url = @@baseurl + "weather?lat={#{latitude}}&lon={#{longitude}}&appid={#{@@apikey}}"
         @@data = RestClient.get(@@url)
         @@weather_data = JSON.parse(@@data)
-
         @@weather_data["main"]["temp"]
     end
         

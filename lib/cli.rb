@@ -15,6 +15,8 @@ class Cli
                 cancel_reservation
             elsif user_input == 'change party'
                 change_party
+            elsif user_input == 'find courses'
+                find_courses
             else
                 puts "Not a valid command. Please try again."
             end
@@ -164,37 +166,12 @@ class Cli
     end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def find_courses
+        courses = Course.all.map do |course|
+            "#{course.name} | cost: $#{course.cost}"
+        end
+        puts courses 
+        puts "To make your tee time type make a reservation otherwise type help"
+    end
 
 end

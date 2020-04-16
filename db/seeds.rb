@@ -29,6 +29,51 @@ course4 = Course.create(
     cost: 55,
     driving_range: "Yes"
 )
+course5 = Course.create(
+    name: "Fossil Ridge",
+    public: "Yes",
+    cost: 50,
+    driving_range: "Yes"
+)
+course5 = Course.create(
+    name: "Todd Creek",
+    public: "Yes",
+    cost: 62,
+    driving_range: "Yes"
+)
+
+course6 = Course.create(
+    name: "Castle Pines",
+    public: "No",
+    cost: 900,
+    driving_range: "Yes"
+)
+course7 = Course.create(
+    name: "Pelican Lakes",
+    public: "Yes",
+    cost: 85,
+    driving_range: "No"
+)
+course8 = Course.create(
+    name: "Park Hill",
+    public: "Yes",
+    cost: 25,
+    driving_range: "No"
+)
+
+course9 = Course.create(
+    name: "Cherry Hills",
+    public: "No",
+    cost: 750,
+    driving_range: "Yes"
+)
+
+course10 = Course.create(
+    name: "Flatirons",
+    public: "Yes",
+    cost: 28,
+    driving_range: "No"
+)
 
 golfer1 = Golfer.create(
     name: "Glenn Weber",

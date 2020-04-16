@@ -26,14 +26,14 @@ class Cli
     end
 
     def help
-        puts "/********************** Tee Time Commands **********************/"
-        puts "/'help' -Displays list of commands                              /"
-        puts "/'make reservation' -Allows user to make Tee Time reservation   /"
-        puts "/'cancel reseration' -Allows user to cancel Tee Time reservation/"
-        puts "/'find reservation' -Finds a reservation                        /"
-        puts "/'find courses' -Displays list of available courses             /"
-        puts "/'change party' -Allows user to change their party size         /"
-        puts "/'exit' -Quits the program                                      /"
+        puts "/********************** Tee Time Commands ***********************/"
+        puts "/'help' -Displays list of commands                               /"
+        puts "/'make reservation' -Allows user to make Tee Time reservation    /"
+        puts "/'cancel reservation' -Allows user to cancel Tee Time reservation/"
+        puts "/'find reservation' -Finds a reservation                         /"
+        puts "/'find courses' -Displays list of available courses              /"
+        puts "/'change party' -Allows user to change their party size          /"
+        puts "/'exit'-Quits the program                                        /"
     end
 
     def get_golfer_name
@@ -165,13 +165,13 @@ class Cli
         end
     end
 
-
     def find_courses
         courses = Course.all.map do |course|
-            "#{course.name} | cost: $#{course.cost}"
+            "Course: #{course.name} | Cost: $#{course.cost} | Driving Range: #{course.driving_range} | Public: #{course.public}"
         end
+        puts "\n"
         puts courses 
-        puts "To make your tee time type make a reservation otherwise type help"
+        puts "\nTo reserve a tee time type 'make reservation' otherwise type 'help'."
     end
 
 end

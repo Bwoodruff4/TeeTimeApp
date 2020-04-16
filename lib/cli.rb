@@ -1,7 +1,7 @@
 class Cli 
 
     def appstart
-        puts "Welcome to Tee Time App"
+        puts "\nWelcome to Tee Time App"
         puts "For list of commands type 'help'."
         user_input = gets.chomp
         while user_input != 'exit'
@@ -9,8 +9,8 @@ class Cli
                 help
             elsif user_input == 'make reservation'
                 make_reservation
-            elsif user_input == 'find reservation'
-                find_reservation
+            elsif user_input == 'find reservations'
+                find_reservations
             elsif user_input == 'cancel reservation'
                 cancel_reservation
             elsif user_input == 'change party'
@@ -20,6 +20,8 @@ class Cli
                 puts "\nTo reserve a tee time type 'make reservation' otherwise type 'help'."
             elsif user_input == 'course weather'
                 course_weather
+            elsif user_input == 'change handicap'
+                change_handicap
             else
                 puts "Not a valid command. Please try again."
             end
@@ -34,15 +36,16 @@ class Cli
         puts "/'help' -Displays list of commands                               /"
         puts "/'make reservation' -Allows user to make Tee Time reservation    /"
         puts "/'cancel reservation' -Allows user to cancel Tee Time reservation/"
-        puts "/'find reservation' -Finds a reservation                         /"
+        puts "/'find reservations' -Finds golfer's reservations                /"
         puts "/'change party' -Allows user to change their party size          /"
+        puts "/'change handicap' -Allows user to change their handicap         /"
         puts "/'find courses' -Displays list of available courses              /"
         puts "/'course weather' -Displays course weather given a course name   /"
         puts "/'exit'-Quits the program                                        /"
     end
 
     def get_golfer_name
-        puts "\nPlease enter reservation name:"
+        puts "\nPlease enter your name:"
         name = gets.chomp
     end
 
@@ -70,17 +73,17 @@ class Cli
 
     def get_reservation_time
         puts "\nPlease enter the time and date of your reservation"
-        puts "Format: (ex: 7:00AM 01/01/2020)\n"
+        puts "Format: (ex: 7:00AM 01/01/2020)"
         reservation = gets.chomp
     end
 
     def get_course
         puts "\nWould you like to see a list of valid courses?(y/n)"
         user_input = gets.chomp.downcase
-        if user_input = 'y'
+        if user_input == 'y'
             find_courses
             puts "\nEnter a course name:"
-        elsif user_input = 'n'
+        elsif user_input == 'n'
             puts "\nEnter course name:"
         else
             puts "\nNot a valid command"
@@ -118,9 +121,18 @@ class Cli
         Teetime.create(reservation_time: reservation_time, course: course, golfer: golfer, party_size: party_size)
     end
 
-
     def make_reservation
-        golfer = create_new_golfer(get_golfer_name, get_golfer_age, get_golfer_handicap)
+        puts "\nAre you already a registered golfer?(y/n)"
+        user_input = gets.chomp.downcase
+        if user_input == 'y'
+            golfer = find_golfer
+        elsif user_input == 'n'
+            golfer = create_new_golfer(get_golfer_name, get_golfer_age, get_golfer_handicap)
+        else
+            puts "\nNot a valid command."
+            make_reservation
+        end
+
         create_new_teetime(get_reservation_time, get_course, golfer, get_party_size)
         puts "\nYour reservation has been made."
     end
@@ -140,6 +152,25 @@ class Cli
 
     def find_golfer
         Golfer.find_by(name: get_golfer_name, age: get_golfer_age, handicap: get_golfer_handicap)
+    end
+
+    def find_reservations
+        golfer = find_golfer
+
+        if golfer == nil
+            puts "Sorry golfer not found"
+            return
+        end
+
+        reservations = Teetime.where(golfer: golfer)
+
+        if reservations == nil
+            puts "\nSorry, no reservations found."
+        else
+            teetimes = reservations.map{|reservation|"\nReservation Time: #{reservation.reservation_time}\nCourse: #{reservation.course.name}\nParty Size: #{reservation.party_size}"}
+            puts teetimes
+        end
+        reservations
     end
 
     def find_reservation
@@ -178,6 +209,28 @@ class Cli
             reservation.party_size = get_party_size
             reservation.save
             puts "\nReservation has been updated."
+        end
+    end
+
+    def change_handicap
+        golfer = find_golfer
+
+        if golfer == nil
+            puts "\nSorry golfer not found."
+            return
+        else
+            puts "\nName: #{golfer.name}\nAge: #{golfer.age}\nHandicap: #{golfer.handicap}"
+        end
+        
+        puts "\nIs this the golfer you would like to update? (y/n)"
+        user_input = gets.chomp.downcase
+
+        if user_input == 'n'
+            return
+        elsif user_input == 'y'
+            golfer.handicap = get_golfer_handicap
+            golfer.save
+            puts "\nGolfer handicap has been updated."
         end
     end
 

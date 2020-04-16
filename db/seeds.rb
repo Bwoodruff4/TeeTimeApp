@@ -70,8 +70,8 @@ course8 = Course.create(
     public: "Yes",
     cost: 85,
     driving_range: "No",
-    latitude : "40.4568",
-    longitude : "104.8994"
+    latitude: "40.4568",
+    longitude: "104.8994"
 )
 course9 = Course.create(
     name: "Overland Park",

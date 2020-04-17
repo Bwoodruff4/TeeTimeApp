@@ -1,8 +1,7 @@
 class Createlatlong < ActiveRecord::Migration[6.0]
   def change
-    change_table :courses do |t|
-    t.string :latitude
-    t.string :longitude
-    end
+    add_column :courses, :latitude, :string
+    add_column :courses, :longitude, :string
+
   end
 end

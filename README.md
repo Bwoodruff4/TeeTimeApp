@@ -27,7 +27,9 @@
   - 'exit'- Quits the program         
   ```
 
-  List of DataBase Methods
+ ### List of DataBase Methods
+ ```
   - Average Golfer Age (Golfer.average_age)
   - Average Golfer (Handicap Golfer.average_handicap)
   - Average Party Size (Teetime.average_party_size)
+ ```

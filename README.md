@@ -1,11 +1,15 @@
 # Welcome to the Tee Time Scheduling App!!
+
+### Overview:
   _This app is a CLI application built with Ruby 2.6.1 and ActiveRecord_
 
   _Allows data entry for making tee time reservations at golf courses saved in the database._
 
   _When a user makes a reservation, they are asked to enter in golfer information and enter a reservation time._
+  
+  ### Features:
 
-  ### The user has the capability to:
+  #### The user has the capability to:
   ```
   - cancel reservations
   - find all of their reservations
@@ -14,7 +18,7 @@
   - check weather conditions at the courses in the database.
   ```
 
-  ### List of User Commands
+  #### List of User Commands:
   ```
   - 'help' - Displays list of commands                              
   - 'make reservation' - Allows user to make Tee Time reservation 
@@ -27,9 +31,9 @@
   - 'exit'- Quits the program         
   ```
 
- ### List of DataBase Methods
+ #### List of DataBase Methods:
  ```
-  - Average Golfer Age (Golfer.average_age)
-  - Average Golfer (Handicap Golfer.average_handicap)
-  - Average Party Size (Teetime.average_party_size)
+  - Average Golfer Age -> (Golfer.average_age)
+  - Average Golfer -> (Handicap Golfer.average_handicap)
+  - Average Party Size -> (Teetime.average_party_size)
  ```

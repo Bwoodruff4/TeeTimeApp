@@ -1,4 +1,4 @@
-Welcome to the Tee Time Scheduling App!!
+###Welcome to the Tee Time Scheduling App!!
   This app is a CLI application built with Ruby 2.6.1 and ActiveRecord
 
   Allows data entry for making tee time reservations at golf courses saved in the database.

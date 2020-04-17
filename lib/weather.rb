@@ -3,10 +3,9 @@ class Weather
     @@baseurl = "api.openweathermap.org/data/2.5/"
 
     def self.get_weather_data(latitude, longitude)
-        @@url = @@baseurl + "weather?lat={#{latitude}}&lon={#{longitude}}&appid={#{@@apikey}}"
+        @@url = @@baseurl + "weather?lat=#{latitude}&lon=#{longitude}&units=imperial&appid=#{@@apikey}"
         @@data = RestClient.get(@@url)
         @@weather_data = JSON.parse(@@data)
-        @@weather_data["main"]["temp"]
     end
-        
+
 end

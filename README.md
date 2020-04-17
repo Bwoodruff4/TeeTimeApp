@@ -58,20 +58,19 @@
  ## Interface
  
  #### help
- 
+  ![Help](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.17.49%20PM.png)
  #### make reservation
- 
+  ![Make Reservation](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.20.03%20PM.png)
  #### cancel reservation
- 
+  ![Make Reservation](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.20.43%20PM.png)
  #### find reservations
- 
+  ![Find Reservations](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.22.26%20PM.png)
  #### change party
+  ![Change Party](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.23.28%20PM.png)
  
  #### change handicap
- 
+  ![Change Handicap](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.24.04%20PM.png)
  #### find courses
- 
+  ![Find Courses](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.24.38%20PM.png)
  #### course weather
- 
- #### exit
- 
+  ![Course Weather](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.25.41%20PM.png)

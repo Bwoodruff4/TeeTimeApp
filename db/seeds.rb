@@ -7,8 +7,8 @@ course1 = Course.create(
     public: "No",
     cost: 5000,
     driving_range: "Yes",
-    latitude: "33.5021",
-    longitude: "82.0226"
+    latitude: "33.466667",
+    longitude: "-81.966667"
 )   
 
 course2 = Course.create(
@@ -17,7 +17,7 @@ course2 = Course.create(
     cost: 250,
     driving_range: "Yes",
     latitude: "35.1899",
-    longitude: "79.4669"
+    longitude: "-79.4669"
 )
 
 course3 = Course.create(
@@ -26,7 +26,7 @@ course3 = Course.create(
     cost: 25,
     driving_range: "No",
     latitude: "39.7513",
-    longitude: "104.9506"
+    longitude: "-104.9506"
 )
 
 course4 = Course.create(
@@ -35,7 +35,7 @@ course4 = Course.create(
     cost: 55,
     driving_range: "Yes",
     latitude: "39.7832",
-    longitude: "104.7579"
+    longitude: "-104.7579"
 )
 
 
@@ -45,7 +45,7 @@ course5 = Course.create(
     cost: 50,
     driving_range: "Yes",
     latitude: "39.7375",
-    longitude: "105.2117"
+    longitude: "-105.2117"
 )
 
 course6 = Course.create(
@@ -54,7 +54,7 @@ course6 = Course.create(
     cost: 62,
     driving_range: "Yes",
     latitude: "39.9750",
-    longitude: "104.8886"
+    longitude: "-104.8886"
 )
 
 course7 = Course.create(
@@ -63,7 +63,7 @@ course7 = Course.create(
     cost: 900,
     driving_range: "Yes",
     latitude: "39.4407",
-    longitude: "104.8987"
+    longitude: "-104.8987"
 )
 course8 = Course.create(
     name: "Pelican Lakes",
@@ -71,7 +71,7 @@ course8 = Course.create(
     cost: 85,
     driving_range: "No",
     latitude: "40.4568",
-    longitude: "104.8994"
+    longitude: "-104.8994"
 )
 course9 = Course.create(
     name: "Overland Park",
@@ -79,7 +79,7 @@ course9 = Course.create(
     cost: 25,
     driving_range: "No",
     latitude: "39.6863",
-    longitude: "104.9963"
+    longitude: "-104.9963"
 )
 
 course10 = Course.create(
@@ -88,7 +88,7 @@ course10 = Course.create(
     cost: 750,
     driving_range: "Yes",
     latitude: "39.6429",
-    longitude: "104.9626"
+    longitude: "-104.9626"
 )
 
 course11 = Course.create(
@@ -97,7 +97,7 @@ course11 = Course.create(
     cost: 28,
     driving_range: "No",
     latitude: "40.0101",
-    longitude: "105.2209"
+    longitude: "-105.2209"
 )
 
 golfer1 = Golfer.create(

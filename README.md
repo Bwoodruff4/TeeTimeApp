@@ -28,6 +28,7 @@
 
   #### The user has the capability to:
   ```
+  - make reservations
   - cancel reservations
   - find all of their reservations
   - change their party size and handicap information

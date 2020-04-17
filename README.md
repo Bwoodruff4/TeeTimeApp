@@ -7,6 +7,23 @@
 
   _When a user makes a reservation, they are asked to enter in golfer information and enter a reservation time._
   
+  #### Gems:
+  ```
+  "pry"
+  "activerecord"
+  "sinatra-activerecord"
+  "rake"
+  "sqlite3"
+  "require_all"
+  "rest-client"
+  "colorize"
+  ```
+  
+  #### API
+  ```
+  Open Weather API -> URL: https://openweathermap.org/api
+  ```
+  
   ### Features:
 
   #### The user has the capability to:
@@ -34,6 +51,11 @@
  #### List of DataBase Methods:
  ```
   - Average Golfer Age -> (Golfer.average_age)
-  - Average Golfer -> (Handicap Golfer.average_handicap)
+  - Average Golfer Handicap -> (Golfer.average_handicap)
   - Average Party Size -> (Teetime.average_party_size)
  ```
+ 
+ ## Interface
+ 
+ 
+ 

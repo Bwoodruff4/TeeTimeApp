@@ -75,3 +75,7 @@
   ![Find Courses](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.24.38%20PM.png)
  #### course weather
   ![Course Weather](https://github.com/Bwoodruff4/TeeTimeApp/blob/master/Screen%20Shot%202020-04-17%20at%201.25.41%20PM.png)
+
+
+## Created By:
+Blake Woodruff and Ryan Anderson

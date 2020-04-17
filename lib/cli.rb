@@ -246,8 +246,8 @@ class Cli
         course = get_course
         weather_data = Weather.get_weather_data(course.latitude, course.longitude)
         puts "\nCurrent Weather: #{weather_data["weather"][0]["description"]}"
-        puts "Temperature: #{weather_data["main"]["temp"].round}°F\n"
-        puts "Feels Like: #{weather_data["main"]["feels_like"].round}°F\n"
+        puts "Temperature: #{weather_data["main"]["temp"].round}°F"
+        puts "Feels Like: #{weather_data["main"]["feels_like"].round}°F"
         puts "Wind Speed: #{weather_data["wind"]["speed"].round} mph\n"
     end
 

@@ -1,9 +1,7 @@
 class AddColumnsToGolferTab < ActiveRecord::Migration[6.0]
   def change
-    change_table :golfers do |t|
-      t.integer :age
-      t.integer :handicap
-      t.remove :party_size
-    end
+    add_column :golfers, :age, :integer
+    add_column :golfers, :handicap, :integer
+      
   end
 end

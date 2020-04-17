@@ -57,5 +57,21 @@
  
  ## Interface
  
+ #### help
  
+ #### make reservation
+ 
+ #### cancel reservation
+ 
+ #### find reservations
+ 
+ #### change party
+ 
+ #### change handicap
+ 
+ #### find courses
+ 
+ #### course weather
+ 
+ #### exit
  
